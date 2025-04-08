@@ -1,25 +1,25 @@
-<!DOCTYPE html>
+<!DOCTYPE html><!---->
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Todo with Categories</title>
   <link rel="stylesheet" href="Task1.css">
 </head>
-<body>
-  <div class="container">
-    <h1>Task Manager</h1>
+<body><!--The visuals of the webpage.-->
+  <div class="container"><!--div with class provided, because its referred to in css.-->
+    <h1>Task Manager</h1><!--Header for the webpage.-->
 
-    <input type="text" id="taskInput" placeholder="Task description">
-    <select id="categorySelect">
+    <input type="text" id="taskInput" placeholder="Task description"> <!--This is where the user puts their task.-->
+    <select id="categorySelect"><!--This is where the user chooses category of task among the three options below.-->
       <option value="Work">Work</option>
       <option value="Home">Home</option>
       <option value="Other">Other</option>
     </select>
-    <button id="addBtn">Add Task</button>
-    <button id="filterBtn">Filter Tasks</button>
-    <button id="clearFilterBtn">Reset Filter</button>
+    <button id="addBtn">Add Task</button><!--Clicking this button uses javascript to add the task to a list.-->
+    <button id="filterBtn">Filter Tasks</button><!--Clicking this button uses javascript to filter tasks on the current option.-->
+    <button id="clearFilterBtn">Reset Filter</button><!--Clicking this button uses javascript to reset the filter.-->
 
-    <ul id="taskList"></ul>
+    <ul id="taskList"></ul><!--This is the unordered list that gets <li> elements with javascript through addBtn button.-->
   </div>
 
   <script src="Task1.js"></script>
