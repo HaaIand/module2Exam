@@ -1,0 +1,368 @@
+html {
+    font-size: 16px;
+    font-family: "myriad-pro", Verdana, Tahoma, "Dejavu Sans", sans-serif;
+}
+
+body {
+    margin: 0px;
+}
+
+.header {
+    /*margin: auto;*/
+    /*justify-content: center;*/
+    background-color: #FFDACC;
+    padding: 12px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#mainpagelink {
+    text-decoration: none;
+    padding: 4px;
+    font-size: 2rem;
+    margin: 6px;
+}
+
+#rightsideheader {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+        "header1" "header2" "header3"
+        "login" "search" "hamburger"
+        "footer1" "footer2" "footer3"
+    ;
+}
+
+#whiteheader1 {
+    grid-area: "header1";
+}
+
+#whiteheader3 {
+    grid-area: "header2";
+}
+
+#whiteheader3 {
+    grid-area: "header3";
+}
+
+#login {
+    grid-area: "login";
+}
+
+#search {
+    grid-area: "search";
+}
+
+#hamburger {
+    grid-area: "hamburger";
+}
+
+#whitefooter1 {
+    grid-area: "footer1";
+}
+
+#whitefooter2 {
+    grid-area: "footer2";
+}
+
+#whitefooter3 {
+    grid-area: "footer3";
+}
+
+
+.icon {
+    min-width: 48px;
+    min-height: 48px;
+    max-width: 48px;
+    max-height: 48px;
+}
+
+/*Body information*/
+
+.body {
+    padding: 7.5%;
+}
+
+.topofdetails {
+    align-content: center;
+}
+
+.bigheader {
+    font-size: 3rem;
+    color: #983D00;
+}
+
+.detailsheader {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+}
+
+.mainphoto {
+    height: 500px;
+    width: 792px;
+    object-fit: cover;
+}
+
+.detailsrightheader {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.detailsbottomright {
+    display: flex;
+    flex-direction: column;
+}
+
+.miniheader {
+    color: #983D00;
+    font-size: 1.125rem;
+}
+
+.secondary {
+    color: #FFFFFF;
+    border: 1px solid #EE7203;
+    background-color: #EE7203;
+    box-sizing: border-box;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 12px;
+}
+
+.secondary:hover {
+    border: 1px solid #EE7203;
+    color: #EE7203;
+    background-color: #FFFFFF;
+    transition: 0.3s;
+    font-size: 1.5rem;
+}
+
+.primary {
+    color: white;
+    background-color: #CF3C3A;
+    border: 1px solid #CF3C3A;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 12px;
+}
+
+.primary:hover {
+    color: #CF3C3A;
+    background-color: white;
+    transition: 0.3s;
+    border: 1px solid #CF3C3A;
+    font-size: 1.5rem;
+}
+
+a {
+    text-decoration: none;
+    padding: 4px;
+    font-size: 2rem;
+    margin: 6px;    
+}
+
+a:hover a:visited a:active a:focus {
+    text-decoration: none;
+    padding: 4px;
+}
+
+.smallheader {
+    font-size: 1.5rem;
+    color: #983D00;
+}
+
+.text {
+    font-size: 1rem;
+    color: #983D00;
+}
+
+#nosmoking {
+    float: left;
+}
+
+/*Graphic content*/
+
+.demographiccontent {
+    display: grid;
+    /*justify-content: space-evenly;*/
+    flex-flow: row;
+    grid-template-areas: 
+        "graph1" "group1" "graph2" "group2"
+        "graph3" "group3" "graph4" "group4";
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 24px;
+}
+
+@media screen and (max-width: 1200px ) {
+    .demographiccontent {
+        grid-template-areas: 
+        "graph1" "group1"
+        "graph2" "group2"
+        "graph3" "group3"
+        "graph4" "group4";
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 650px ) {
+    .demographiccontent {
+        grid-template-areas: 
+        "graph1"
+        "group1"
+        "graph2" 
+        "group2"
+        "graph3" 
+        "group3"
+        "graph4" 
+        "group4";
+        grid-template-columns: 1fr;
+    }
+}
+
+#neighborchart {
+    grid-area: "graph1";
+}
+
+#neighborchartgroup {
+    grid-area: "group1";
+}
+
+#neighborstfieldchart {
+    grid-area: "graph2";
+}
+
+#neighborstfieldgroup {
+    grid-area: "group2";
+}
+
+#neighborstyrschart {
+    grid-area: "graph3";
+}
+
+#neighborstyrsgroup {
+    grid-area: "group3";
+}
+
+#neighborintchart {
+    grid-area: "graph4";
+}
+
+#neighborintgroup {
+    grid-area: "group4";
+}
+
+.head {
+    font-size: 2rem;
+    color: #0A7DC3;
+}
+
+/*Comments*/
+
+#commentsheader {
+    align-content: baseline ;
+}
+
+#comhead {
+    float: left;
+    margin: 8px 16px 8px 0px;
+}
+
+#two {
+    margin-top: 0px;
+}
+
+.commentsection, #commentsection1, #commentsection2 {
+    clear: both;
+}
+
+.star {
+    margin: 6px 0 6px 0;
+}
+
+#anon1, #anon2 {
+    float: left;
+    margin: 6px 6px 6px 6px;
+}
+
+#anon1text, #anon2text {
+    float: left;
+    max-width: 40%;
+    margin: 6px 6px 6px 6px;
+}
+
+/*.graphicitem {
+    margin: 0px;
+}
+
+.graphic {
+    object-fit: contain;
+    margin: 12px;
+}*/
+
+/*#neighborchart {
+    width: 25%;
+}
+
+#neighborchartgroup {
+    width: 25%;
+}
+
+#neighborstfieldchart {
+    width: 25%;
+}
+
+#neighborstfieldgroup {
+    width: 25%;
+}*/
+
+/*Footer info*/
+
+.footer {
+    background-color: #0A7DC3;
+    padding: 24px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    clear: both;
+}
+
+#leftsidefooter {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.footeritem {
+    margin: 0 30px 0 15px;
+    color: white;
+}
+
+.footeritem :hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 800px ) {
+    .footer {
+        display: flex;
+        flex-flow: column wrap;
+    }
+}
+
+@media screen and (max-width: 600px ) {
+    .footer {
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+    }
+    #leftsidefooter {
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+    }
+    #socialmedia {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}

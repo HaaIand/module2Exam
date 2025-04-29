@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="comparison.css">
+    <title>Comparison</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="header">
+            <div id="leftsideheader">
+                <a id="mainpagelink" href="main.html" target="_self"><img src="images/Collab Logo.png" alt="UiBSammenLogo"></a>
+            </div>
+            <div id="rightsideheader">
+                <div id="whiteheader1">
+                    
+                </div>
+                <div id="whiteheader2">
+                    
+                </div>
+                <div id="whiteheader3">
+                    
+                </div>
+                <div id="login">
+                    <img class="icon" src="images/material-symbols_person.png" alt="Login">
+                </div>
+                <div>
+                    <img class="icon" id="search" src="images/search icon.png" alt="Search">
+                </div>
+                <div>
+                    <img class="icon" id="hamburger" src="images/quill_hamburger.png" alt="Hamburger">
+                </div>
+                <div id="whitefooter1">
+                    
+                </div>
+                <div id="whitefooter2">
+                    
+                </div>
+                <div id="whitefooter3">
+                    
+                </div>
+            </div>
+        </div>
+        <div class="body">
+            <div class="headinfo" id="availhead">
+                <p class="bigheader">Comparison</p>
+                <button class="btn btn-secondary secondary modalbutton" onclick="newCompareModal('left')">Change left listing</button>
+                <button class="btn btn-secondary secondary modalbutton" onclick="newCompareModal('right')">Change right listing</button>
+                <div class="dropdown">
+                    <button class="btn btn-secondary secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        Filter Comparisons
+                    </button>
+                    <div class="dropdown-menu">
+                        <form class="px-4 py-3">
+                        <div class="mb-3">
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input comparison-filter" data-section="aptsizecomp" id="dropdownCheck1">
+                                <label class="form-check-label" for="dropdownCheck1">
+                                    Apartment size
+                                </label>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input comparison-filter" data-section="distancecomp" id="dropdownCheck2">
+                                <label class="form-check-label" for="dropdownCheck2">
+                                    Distance
+                                </label>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input comparison-filter" data-section="pricecomparison" id="dropdownCheck3">
+                                <label class="form-check-label" for="dropdownCheck3">
+                                    Price
+                                </label>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input comparison-filter" data-section="sharedcomp" id="dropdownCheck4">
+                                <label class="form-check-label" for="dropdownCheck4">
+                                    Shared Facilities
+                                </label>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input comparison-filter" data-section="conditioncomp" id="dropdownCheck5">
+                                <label class="form-check-label" for="dropdownCheck5">
+                                    Location diagram
+                                </label>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input comparison-filter" data-section="agecomp" id="dropdownCheck6">
+                                <label class="form-check-label" for="dropdownCheck6">
+                                    Neighbor ages
+                                </label>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input comparison-filter" data-section="interestcomp" id="dropdownCheck7">
+                                <label class="form-check-label" for="dropdownCheck7">
+                                    Neighbor interests
+                                </label>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="dropdown-divider"></div>
+                        <button type="submit" class="btn btn-primary primary" id="filterapply">Apply comparison</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div id="maincontent">
+                <div></div>
+                    <p class="bigheader">You seem to not have chosen a listing. Go back to the listing page here: </p>
+                    <a class="button primary" id="gotomain" target="_self" href="main.html">Go to Main</a>
+                <!--<div class="compbighead">
+                    <div class="compareheader">
+                        <p class="mediumheader">Brann Stadion Apartment</p>
+                        <img class="apartmentphoto" src="images/74f28f3540feee133442f0d8f052ac79966e9e14-7952x5304.jpg" alt="Brann Stadion Apartment">
+                    </div>
+                    <div class="compareheader">
+                        <p class="mediumheader">Cabin for 3 people</p>
+                        <img class="apartmentphoto" src="images/cozy-cub-intro-jan2024.jpg" alt="Brann Stadion Apartment"> 
+                    </div>
+                </div>
+                <p class="smallheader center">House condition diagram</p>
+                <div id="locationdiagram">
+                    <img class="diagram" src="images/Location diagram.png" alt="Brann stadion location diagram">
+                    <img class="diagram" src="images/Location diagram2.png" alt="Cabin location diagram">
+                </div>
+                <p class="smallheader center">Neighbor age groups</p>
+                <div class="demographiccontent" id="agegraphic">
+                    <div id="neighborchartgroup">
+                        <img class="graphic" src="images/Right side chart.png" alt="Neighbor age groups brann">
+                    </div>
+                    <div id="neighborchart">
+                        <img class="graphic" src="images/Frame 27.png" alt="Neighbor age groups brann">
+                    </div>
+                    <div id="neighborchart2">
+                        <img class="graphic" src="images/cabinframage.png" alt="Neighbor age groups cabin">
+                    </div>
+                    <div id="neighborchartgroup2">
+                        <img class="graphic" src="images/Right side chart.png" alt="Neighbor age groups chart">
+                    </div>
+                </div>
+                <div id="aptsizecomp">
+                    <p class="smallheader center">Apartment size</p>
+                    <div id="aptsizes">
+                        <p class="smallheader aptsize">15 square meters</p>
+                        <p class="smallheader aptsize">180 square meters</p>
+                    </div>
+                </div>
+                <p class="smallheader center">Distance from you</p>
+                <div id="distancecomparison">
+                    <div class="distancecard">
+                        <img class="icon" src="images/distanceto.png" alt="Icon symbolizing distance">
+                        <p>2,9 km</p>
+                    </div>
+                    <div class="distancecard">
+                        <p>120 km</p>
+                        <img class="icon" src="images/distancetorotated.png" alt="Icon symbolizing distance">
+                    </div>
+                </div>
+                <div id="sharedcomp">
+                    <p class="smallheader center">Apartment size</p>
+                    <div id="shared">
+                        <p class="smallheader aptsize">15 square meters</p>
+                        <p class="smallheader aptsize">180 square meters</p>
+                    </div>
+                </div>
+                <p class="smallheader center">Neighbor interests</p>
+                <div class="demographiccontent" id="interestgraphic">
+                    <div id="neighborintgroup">
+                        <img class="graphic" src="images/neiintgrp.png" alt="Neighbor interest groups brann">
+                    </div>
+                    <div id="neighborintchart">
+                        <img class="graphic" src="images/neiint.png" alt="Neighbor interest brann">
+                    </div>
+                    <div id="neighborchart2">
+                        <img class="graphic" src="images/Frame 26.png" alt="Neighbor interest cabin">
+                    </div>
+                    <div id="neighborintgroup2">
+                        <img class="graphic" src="images/neiintgrp.png" alt="Neighbor interest groups cabin">
+                    </div>
+                </div>-->
+            </div>
+        </div>
+        <div class="footer">
+            <div id="leftsidefooter">
+                <div class="footeritem" id="contactmethods">
+                    <div>
+                        <p>Contact Us</p>
+                    </div>
+                    <div id="socialmedia">
+                        <div id="facebook">
+                            <img src="images/ic_baseline-facebook.png" onclick="uibFacebook()" alt="Facebook Logo">
+                        </div>
+                        <div id="snapchat">
+                            <img src="images/ic_baseline-snapchat.png" onclick="uibSnap()" alt="Snapchat Logo">
+                        </div>
+                        <div id="instagram">
+                            <img src="images/mdi_instagram.png" onclick="uibInstagram()" alt="Instagram Logo">
+                        </div>
+                        <div id="youtube">
+                            <img src="images/mdi_youtube.png" onclick="uibYoutube()" alt="Youtube Logo">
+                        </div>
+                    </div>
+                </div>
+                <div class="footeritem" id="studies">
+                    <p>Studies</p>
+                </div>
+                <div class="footeritem" id="about">
+                    <p>About Us</p>
+                </div>
+                <div class="footeritem" id="addmore">
+                    <p>Add an Apartment</p>
+                </div>
+            </div>
+            <div>
+                <img src="images/Collab Logo.png" alt="UiBLogo">
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="compareModalleft" tabindex="-1" aria-labelledby="compareModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="compareModalLabelleft">Select a new listing to compare</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <select class="form-select" id="newListingSelectleft">
+                        <option value="" disabled selected>Select a listing</option>
+                    </select>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary primary" id="confirmCompareBtnleft" onclick="applyNewCompare()">Compare</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="compareModalright" tabindex="-1" aria-labelledby="compareModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="compareModalLabelright">Select a new listing to compare</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <select class="form-select" id="newListingSelectright">
+                        <option value="" disabled selected>Select a listing</option>
+                    </select>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary primary" id="confirmCompareBtnright" onclick="applyNewCompare()">Compare</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="comparison.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+</body>

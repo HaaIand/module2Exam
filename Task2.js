@@ -25,7 +25,9 @@ function calculateTotal() {
 
 function confirmBooking() {
     var total = document.getElementById('total-cost').innerText;
-    if (total === 0) {
+    //Added a better check for confirmation of bookings.
+    //if (total === 0) {
+    if (total == 0 || total === '') {
         alert('Please calculate the total before confirming.');
         return;
     }
@@ -39,4 +41,6 @@ function resetForm() {
     //Nights value should be 1 by default, when resetting, because you are staying at least one night if you fill the form.
     document.getElementById('nights').value = 1;
     document.getElementById('confirmation-msg').innerText = '';
+    //Added another reset of the total cost.
+    document.getElementById('total-cost').innerText = '0.00';
 }

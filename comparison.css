@@ -1,0 +1,407 @@
+html {
+    font-size: 16px;
+    font-family: "myriad-pro", Verdana, Tahoma, "Dejavu Sans", sans-serif;
+}
+
+body {
+    margin: 0px;
+}
+
+.header {
+    /*margin: auto;*/
+    /*justify-content: center;*/
+    background-color: #FFDACC;
+    padding: 12px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#mainpagelink {
+    text-decoration: none;
+    padding: 4px;
+    font-size: 2rem;
+    margin: 6px;
+}
+
+#rightsideheader {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+        "header1" "header2" "header3"
+        "login" "search" "hamburger"
+        "footer1" "footer2" "footer3"
+    ;
+}
+
+#whiteheader1 {
+    grid-area: "header1";
+}
+
+#whiteheader3 {
+    grid-area: "header2";
+}
+
+#whiteheader3 {
+    grid-area: "header3";
+}
+
+#login {
+    grid-area: "login";
+}
+
+#search {
+    grid-area: "search";
+}
+
+#hamburger {
+    grid-area: "hamburger";
+}
+
+#whitefooter1 {
+    grid-area: "footer1";
+}
+
+#whitefooter2 {
+    grid-area: "footer2";
+}
+
+#whitefooter3 {
+    grid-area: "footer3";
+}
+
+.primary {
+    color: #FFFFFF;
+    border: 1px solid #CF3C3A;
+    background-color: #CF3C3A;
+    box-sizing: border-box;
+}
+
+.primary:hover {
+    border: 1px solid #CF3C3A;
+    color: #CF3C3A;
+    background-color: #FFFFFF;
+    transition: 0.3s;
+}
+
+#gotomain {
+    color: white;
+    background-color: #CF3C3A;
+    border: 1px solid #CF3C3A;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 12px;
+}
+
+#gotomain:hover {
+    color: #CF3C3A;
+    background-color: white;
+    transition: 0.3s;
+    border: 1px solid #CF3C3A;
+    font-size: 1.5rem;
+}
+
+.icon {
+    min-width: 48px;
+    min-height: 48px;
+    max-width: 48px;
+    max-height: 48px;
+}
+
+/*Body info*/
+
+/*.body {
+    padding: 100px;
+}*/
+
+.body {
+    padding: 7.5%;
+}
+
+.bigheader {
+    font-size: 3rem;
+    color: #983D00;
+    align-content: center;
+}
+
+.mediumheader {
+    font-size: 2rem;
+    color: #983D00;
+    margin: 12px;
+}
+
+.headinfo {
+    font-size: 3rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.modalbutton {
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+.compbighead {
+    display: flex;
+    flex-direction: row;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.compareheader {
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+#rightsideinfo {
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+        "top"
+        "filterbutton"
+        "bottom";
+}
+
+.secondary {
+    color: #FFFFFF;
+    border: 1px solid #EE7203;
+    background-color: #EE7203;
+    box-sizing: border-box;
+}
+
+.secondary:hover {
+    border: 1px solid #EE7203;
+    color: #EE7203;
+    background-color: #FFFFFF;
+    transition: 0.3s;
+}
+
+#filtermain {
+    border: 1px solid #EE7203;
+    display: flex;
+    justify-content: space-between;
+    padding: 4px;
+    grid-area: "filterbutton";
+    font-size: 1rem;
+}
+
+#filtermain:hover {
+    border: 1px solid #EE7203;
+    transition: 0.3s;
+}
+
+#filtermain:hover #imgchevron {
+    filter: invert(100%);
+    transition: 0.3s;
+}
+
+#toprightside {
+    grid-area: "top";
+}
+
+#bottomrightside {
+    grid-area: "bottom";
+}
+
+.apartmentphoto {
+    width: 396px;
+    height: 250px;
+    object-fit: cover;
+}
+
+.smallheader {
+    font-size: 1.5rem;
+    color: #983D00;
+}
+
+.center {
+    text-align: center;
+}
+
+#locationdiagram {
+    display: flex;
+    flex-direction: row;
+    flex-flow: row wrap;
+    justify-content: space-between;
+
+}
+
+.diagram {
+    margin-bottom: 12px;
+}
+
+.demographiccontent {
+    display: grid;
+    /*justify-content: space-evenly;*/
+    flex-flow: row;
+    /*grid-template-areas: 
+        "group1" "graph1" "graph2" "group2";*/
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 24px;
+}
+
+#agegraphic {
+    grid-template-areas: 
+        "group1" "graph1" "graph2" "group2";
+}
+
+#interestgraphic {
+    grid-template-areas: 
+    "group3" "graph3" "group4" "graph4";
+}
+
+#neighborchart {
+    grid-area: "graph1";
+}
+
+#neighborchartgroup {
+    grid-area: "group1";
+}
+
+#neighborchart2 {
+    grid-area: "graph2";
+}
+
+#neighborchartgroup2 {
+    grid-area: "group2";
+}
+
+#neighborintgroup {
+    grid-area: "group3";
+}
+
+#neighborintchart {
+    grid-area: "graph3";
+}
+
+#neighborintgroup2 {
+    grid-area: "group4" ;
+}
+
+#neighborintgraph2 {
+    grid-area: "graph4";
+}
+
+@media screen and (max-width: 1200px ) {
+    .demographiccontent {
+        grid-template-columns: 1fr 1fr;
+    }
+    #agegraphic {
+        grid-template-areas: 
+        "graph1" "group1"
+        "graph2" "group2";
+    }
+    #interestgraphic {
+        grid-template-areas: 
+        "graph3" "group3"
+        "graph4" "group4";
+    }
+}
+
+@media screen and (max-width: 650px ) {
+    .demographiccontent {
+        grid-template-areas: 
+        "graph1"
+        "group1"
+        "graph2" 
+        "group2";
+        grid-template-columns: 1fr;
+    }
+    #agegraphic {
+        grid-template-areas: 
+        "group1"
+        "graph1"
+        "graph2"
+        "group2";
+    }
+    #interestgraphic {
+        grid-template-areas: 
+        "group3"
+        "graph3"
+        "graph4" 
+        "group4";
+    }
+}
+
+#distancecomparison, #pricecomp {
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+}
+
+.smallcompare {
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+}
+
+.aptsize {
+    margin-left: 24px;
+    margin-right: 24px;
+}
+
+.structurecolumn {
+    display: flex;
+    justify-content: space-between;
+}
+
+.structurelist {
+    list-style: none;
+}
+
+.distancecard {
+    display: flex;
+    margin-left: 24px;
+    margin-right: 24px;
+}
+
+/*Footer info*/
+
+.footer {
+    background-color: #0A7DC3;
+    padding: 24px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5rem;
+}
+
+#leftsidefooter {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.footeritem {
+    margin: 0 30px 0 15px;
+    color: white;
+}
+
+.footeritem :hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 800px ) {
+    .footer {
+        display: flex;
+        flex-flow: column wrap;
+    }
+}
+
+@media screen and (max-width: 600px ) {
+    .footer {
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+    }
+    #leftsidefooter {
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+    }
+    #socialmedia {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="details.css">
+    <title>Details</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5 apartmenttitle" id="exampleModalLabel">Search for housing</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <input type="search" class="form control w-100" id="housesearch">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary primary" onclick="searchHousing()">Search</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header">
+            <div id="leftsideheader">
+                <a id="mainpagelink" href="main.html" target="_self"><img src="images/Collab Logo.png" alt="UiBSammenLogo"></a>
+            </div>
+            <div id="rightsideheader">
+                <div id="whiteheader1">
+                    
+                </div>
+                <div id="whiteheader2">
+                    
+                </div>
+                <div id="whiteheader3">
+                    
+                </div>
+                <div id="login">
+                    <img class="icon" src="images/material-symbols_person.png" alt="Login">
+                </div>
+                <div>
+                    <img class="icon" id="search" src="images/search icon.png" alt="Search">
+                </div>
+                <div>
+                    <img class="icon" id="hamburger" src="images/quill_hamburger.png" alt="Hamburger">
+                </div>
+                <div id="whitefooter1">
+                    
+                </div>
+                <div id="whitefooter2">
+                    
+                </div>
+                <div id="whitefooter3">
+                    
+                </div>
+            </div>
+        </div>
+        <div class="body" id="detailsbody">
+            <div class="topofdetails">
+                <p class="bigheader">You seem to not have chosen a listing. Go back to the listing page here: </p>
+                <a class="button primary" target="_self" href="main.html">Go to Main</a>
+            </div>
+            <br>
+        </div>
+        <div class="footer">
+            <div id="leftsidefooter">
+                <div class="footeritem" id="contactmethods">
+                    <div>
+                        <p>Contact Us</p>
+                    </div>
+                    <div id="socialmedia">
+                        <div id="facebook">
+                            <img src="images/ic_baseline-facebook.png" onclick="uibFacebook()" alt="Facebook Logo">
+                        </div>
+                        <div id="snapchat">
+                            <img src="images/ic_baseline-snapchat.png" onclick="uibSnap()" alt="Snapchat Logo">
+                        </div>
+                        <div id="instagram">
+                            <img src="images/mdi_instagram.png" onclick="uibInstagram()" alt="Instagram Logo">
+                        </div>
+                        <div id="youtube">
+                            <img src="images/mdi_youtube.png" onclick="uibYoutube()" alt="Youtube Logo">
+                        </div>
+                    </div>
+                </div>
+                <div class="footeritem" id="studies">
+                    <p>Studies</p>
+                </div>
+                <div class="footeritem" id="about">
+                    <p>About Us</p>
+                </div>
+                <div class="footeritem" id="addmore">
+                    <p>Add an Apartment</p>
+                </div>
+            </div>
+            <div>
+                <img src="images/Collab Logo.png" alt="UiBLogo">
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="compareModal" tabindex="-1" aria-labelledby="compareModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="compareModalLabel">Compare to another listing</h5>
+                    <button type="button" class="btn-close button primary" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="listingcontainer">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="details.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+</body>
